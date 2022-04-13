@@ -15,7 +15,6 @@ from rdkit.DataManip.Metric.rdMetricMatrixCalc import GetTanimotoSimMat
 
 from math import pi
 
-#class Compound_Database_Analysis():
 
 def mol_table_construction(compound_dataset_name):
 
@@ -254,7 +253,7 @@ def lipinski_rule_of_5(table):
     #ax.fill(angles, Ro5_up, 'red', alpha=0.2)
     ax.fill(angles, Ro5_low, 'orangered', alpha=0.2)
 
-    for i in data.index:            ##check this
+    for i in data.index:       
         values = data[categories].values[i]
         values = np.append(values,values[:1])
         ax.plot(angles, values, linewidth = 0.7, color = 'steelblue', alpha = 0.5)
